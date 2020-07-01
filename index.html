@@ -16,11 +16,18 @@
     <script src="lib/popper.min.js"></script>
   </head>
   <body>
-    <div class="jumbotron text-center" style="margin-bottom:0">
+    <noscript>
+      <center>
+        <font color="#FF0000">
+          <b>你的浏览器禁用了JavaScript, 这可能影响本网站的某些功能</b>
+        </font>
+      </center>
+    </noscript>  <!-- JavaScript禁用或无法使用的检查 -->
+    <div class="jumbotron text-center" style="margin-bottom:0" id="page_header">
       <h1><b>i1903studio</b> @GithubPages</h1>
       <p>上海市华二浦东实现学校19级3班同学的官方工作室</p> 
     </div>
-    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark" id="page_nav">
       <a class="navbar-brand" href="#">导航</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
         <span class="navbar-toggler-icon"></span>
@@ -39,35 +46,44 @@
         </ul>
       </div>  
     </nav>
-    <div class="container" style="margin-top:30px">
-    <div class="row">
-      <div class="col-sm-4">
-        <h2>关于我们</h2>
-        <p>这里是上海市华二浦东实现学校19级3班同学的官方工作室</p>
-        <h3>友情链接</h3>
-        <p><a href="https://github.com/i1903studio">Github</a>空间直达</p>
-        <ul class="nav nav-pills flex-column">
-          <li class="nav-item">
-            <a class="nav-link" href="#">链接</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">链接</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">链接</a>
-        </ul>
-        <hr class="d-sm-none">
-      </div>
-      <div class="col-sm-8">
-        <h2>标题</h2>
-        <h5>副标题</h5>
-        <p>TODO: add text</p>
+    <div class="container" style="margin-top:30px" id="page_content">
+      <div class="row">
+        <div class="col-sm-4">
+          <h2>关于我们</h2>
+          <p>这里是上海市华二浦东实现学校19级3班同学的官方工作室</p>
+          <h3>友情链接</h3>
+          <p><a href="https://github.com/i1903studio">Github</a>空间直达</p>
+          <ul class="nav nav-pills flex-column">
+            <li class="nav-item">
+              <a class="nav-link" href="#">链接</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">链接</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">链接</a>
+          </ul>
+          <hr class="d-sm-none">
+        </div>
+        <div class="col-sm-8">
+          <h2>标题</h2>
+          <h5>副标题</h5>
+          <p>TODO: add text</p>
+        </div>
       </div>
     </div>
-  </div>
  
-  <div class="jumbotron text-center" style="margin-bottom:0">
-    <p>&copy; 2020 i1903studio. Powered by <a href="https://pages.github.com/">GithubPages</a>.</p>
-  </div>
+    <div class="jumbotron text-center" style="margin-bottom:0">
+      <p>&copy; 2020 i1903studio. Powered by <a href="https://pages.github.com/">GithubPages</a>.</p>
+    </div>
+    <!-- 在网页最后编写JavaScript 这样可以使DOM树构建完整 以免出错 -->
+    <script>
+      $(document).ready(function(){
+        // Fade in title and content
+        $("#page_header").fadeIn();
+        $("#page_nav").fadeIn("slow");
+        $("#page_content").fadeIn(2500);
+      });
+    </script>
   </body>
 </html>
