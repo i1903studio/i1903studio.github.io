@@ -1,12 +1,12 @@
 <script>
-document.write( "由190318提供技术支持，网站将在8月前关闭，请尽快兑换" \n);
+document.write( "由190318提供技术支持，网站将在8月前关闭，请尽快兑换" );
 var res = Math.floor((Math.random()*10)%6+1);
 if(!(1 <= localStorage.getItem("dice") && localStorage.getItem("dice") <= 6))
 if (typeof(Storage) !== "undefined") {
     // 存储
     localStorage.setItem("dice", ""+res);
     // 检索
-    document.write("Result:" + localStorage.getItem("dice"));
+    document.write(\n"Result:" + localStorage.getItem("dice"));
 } else {
     document.write( "请更换浏览器再试！" );
 }
