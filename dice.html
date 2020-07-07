@@ -1,0 +1,15 @@
+<script>
+var res = Math.floor(Math.random()*10)%6+1;
+if (typeof(Storage) !== "undefined") {
+    if((0 < localStorage.getItem("res") && if localStorage.getItem("res") < 7)) {
+        document.write("<h2>Result:" + localStorage.getItem("res") + "</h2>");
+    }
+    else {
+        localStorage.setItem("res",res);
+        document.write("<h2>Result:" + localStorage.getItem("res") + "</h2>");
+    }
+}
+else {
+ document.write("Please change a browser!");
+}
+</script>
