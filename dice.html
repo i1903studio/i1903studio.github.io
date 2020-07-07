@@ -2,11 +2,11 @@
 var res = Math.floor(Math.random()*10)%6+1;
 if (typeof(Storage) !== "undefined") {
     if((0 < localStorage.getItem("res") && localStorage.getItem("res") < 7)) {
-        document.write("<h2>Result:" + localStorage.getItem("res") + "</h2>");
+        document.write("<h1>Result:" + localStorage.getItem("res") + "</h1>");
     }
     else {
         localStorage.setItem("res",res);
-        document.write("<h2>Result:" + localStorage.getItem("res") + "</h2>");
+        document.write("<h1>Result:" + localStorage.getItem("res") + "</h1>");
     }
 }
 else {
@@ -50,7 +50,7 @@ else {
 		</style>
 	</head>
 	<body>
-		<font color="yellow"><p id="Time" >5</p></font>
+		<font color="blue"><p id="Time" >5</p></font>
 		<p id="Font">将跳转至主页</p>
 	</body>
 </html>
